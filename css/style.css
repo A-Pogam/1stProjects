@@ -57,18 +57,18 @@ nav li {
 
 nav li:hover,
 nav li:focus {
-  border-color: #0065FC;
+  border-color: #0065fc;
 }
 
 nav li a:hover,
 nav li a:focus {
-  color: #0065FC;
+  color: #0065fc;
 }
 
 body {
   max-width: 1400px;
   margin: auto;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 main {
@@ -95,7 +95,7 @@ header h1 {
 }
 
 .form i.fa-location-dot {
-  background-color: #0065FC;
+  background-color: #0065fc;
 }
 
 .fa-location-dot {
@@ -114,7 +114,7 @@ form [type="search"] {
   flex: 1;
   padding: 0 10px 0 10px;
   background-color: transparent;
-  border: 1px solid #F2F2F2;
+  border: 1px solid #f2f2f2;
   min-width: 332px;
   height: 49px;
   margin-bottom: 2%;
@@ -131,8 +131,8 @@ form button {
   font-size: 17px;
   font: bold;
   font-weight: 700;
-  color: #F0F2F6;
-  background-color: #0065FC;
+  color: #f0f2f6;
+  background-color: #0065fc;
 }
 
 /* Filtres et boutons */
@@ -159,7 +159,7 @@ form button {
   background-color: transparent;
   width: auto;
   height: auto;
-  border: 2px solid #D9D9D9;
+  border: 2px solid #d9d9d9;
   border-radius: 25px;
   font-size: 1em;
   font-weight: 700;
@@ -174,23 +174,28 @@ form button {
 
 .filters button:hover,
 .filters button:focus {
-  background-color: #DEEBFF;
+  background-color: #deebff;
 }
 
 .fa-info {
   justify-content: center;
   align-items: center;
-  border: #D9D9D9 1px solid;
+  border: #d9d9d9 1px solid;
   border-radius: 100%;
   padding: 3px 3px 7px 9px;
   color: #0065fc;
+}
+
+/* MAIN */
+main {
+  gap: 20px;
 }
 
 /* hebergements */
 .hebergements {
   display: flex;
   flex-flow: wrap;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 20px;
   padding-left: 40px;
 }
@@ -200,7 +205,7 @@ form button {
 }
 
 .hebergements li i.fa-solid:last-child {
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 .hebergements h2 {
@@ -219,8 +224,8 @@ form button {
 .hebergements li {
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0 0 10px 0 #E0E0E0;
-  width: 23%;
+  box-shadow: 0 0 10px 0 #e0e0e0;
+  width: 30%;
 }
 
 .hebergements img {
@@ -265,11 +270,12 @@ form button {
 .populaires {
   display: flex;
   flex-flow: column;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 20px;
   width: 30%;
   padding-left: 37px;
   padding-right: 40px;
+  margin-right: 0;
 }
 
 .populaires .fa-solid {
@@ -278,7 +284,7 @@ form button {
 }
 
 .populaires li i.fa-solid:last-child {
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 .populaires .fa-solid.fa-chart-line {
@@ -297,7 +303,7 @@ form button {
   width: auto;
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0 0 10px 0 #E0E0E0;
+  box-shadow: 0 0 10px 0 #e0e0e0;
   margin-top: 40px;
 }
 
@@ -339,7 +345,7 @@ form button {
 
 /* activites */
 aside {
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 20px;
   margin: auto;
   margin-top: 20px;
@@ -351,19 +357,29 @@ aside ul {
 }
 
 aside li {
-  box-shadow: 0 0 10px 0 #E0E0E0;
+  box-shadow: 0 0 10px 0 #e0e0e0;
   border-radius: 20px;
   width: 23%;
+  overflow: hidden;
+  /* cache le dépassement, qd ça arrive */
+  height: 445px;
 }
 
 aside li:last-child {
   margin-right: 0px;
 }
 
+aside figure {
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  height: 100%;
+  /* permet à ce que la hauteur respecte son cadre */
+}
+
 aside img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+  min-width: 100%;
+  height: 88%;
   border-radius: 20px 20px 0 0;
 }
 
@@ -374,17 +390,11 @@ aside figcaption {
   font-weight: 700;
 }
 
-aside figure {
-  margin-right: 0px;
-  margin-left: 0px;
-  margin-top: 0px;
-}
-
 /*pied de page*/
 .footer {
   display: flex;
   place-content: space-around;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   margin-top: 60px;
   padding-right: 300px;
 }
@@ -406,7 +416,6 @@ footer ul {
 /* VERSION TABLETTE */
 
 @media (max-width: 991px) {
-
   .filters {
     gap: 10px;
   }
@@ -424,12 +433,12 @@ footer ul {
     flex-direction: column;
   }
 
-  .hebergements {
-    width: 95%;
+  .hebergements ul {
+    width: 100%;
   }
 
-  .hebergements li {
-    width: 28%;
+  .hebergements {
+    width: 95%;
   }
 
   .populaires {
@@ -439,20 +448,41 @@ footer ul {
     padding-right: 45px;
   }
 
-  .populaires li {
-    display: inline-block;
-    width: 32%;
-    align-items: center;
-    margin-right: 2px;
+  .populaires ul {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
   }
 
-  /* aside */
+  .populaires img {
+    width: 50%;
+  }
+
+  .populaires li {
+    width: 32%;
+  }
+
+  /* aside tablet */
   aside li {
-    width: 20%;
     margin-right: 53px;
   }
 
+  aside ul {
+    display: flex;
+    gap: 0px;
+  }
+
+  aside li {
+    height: 250px;
+  }
+
+  aside img {
+    width: 20%;
+    height: 80%;
+  }
+
   aside figcaption {
+    margin-top: 5px;
     font-size: 16px;
   }
 
@@ -465,11 +495,6 @@ footer ul {
 @media (max-width: 767px) {
   nav {
     display: unset;
-  }
-
-  nav img {
-    position: ;
-    right: ;
   }
 
   nav a {
