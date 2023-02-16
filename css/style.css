@@ -69,6 +69,8 @@ body {
   max-width: 1400px;
   margin: auto;
   font-family: "Raleway", sans-serif;
+  padding: 0 50px;
+  /* Comme la maquette */
 }
 
 main {
@@ -80,6 +82,8 @@ main {
 /* header */
 header h1 {
   font-size: 140%;
+  margin-top: 50px;
+  /* Comme la maquette */
 }
 
 /* barre de recherche et le bouton de recherche */
@@ -135,11 +139,17 @@ form button {
   background-color: #0065fc;
 }
 
+form i.fa-magnifying-glass {
+  display: none;
+}
+
 /* Filtres et boutons */
 .filters {
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
+  margin-bottom: 35px;
+  /* Comme la maquette */
 }
 
 .filters h2 {
@@ -176,6 +186,12 @@ form button {
 .filters button:focus {
   background-color: #deebff;
 }
+
+.info {
+  margin-bottom: 40px;
+  /* Comme la maquette */
+}
+
 
 .fa-info {
   justify-content: center;
@@ -348,7 +364,12 @@ aside {
   background-color: #fff;
   border-radius: 20px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 60px;
+  /* Bonne marge (comme la maquette) */
+}
+
+aside h2 {
+  font-weight: 800;
 }
 
 aside ul {
@@ -397,6 +418,8 @@ aside figcaption {
   background-color: #f2f2f2;
   margin-top: 60px;
   padding-right: 300px;
+  padding-bottom: 20px;
+  /* Comme la maquette */
 }
 
 .footer section {
@@ -491,10 +514,19 @@ footer ul {
   }
 }
 
+
 /* VERSION MOBILE */
 @media (max-width: 767px) {
+
+  /* barre de navigation/menu */
   nav {
     display: unset;
+  }
+
+  nav img {
+    margin-top: 20px;
+    margin-left: 45%;
+    margin-bottom: 50px;
   }
 
   nav a {
@@ -516,7 +548,25 @@ footer ul {
     text-align: center;
   }
 
-  h1 {
-    margin-left: 20px;
+  /* barre de recherche */
+  form [type="search"] {
+    min-width: 0px;
   }
+
+  form i.fa-magnifying-glass {
+    margin: -30px;
+    display: inline;
+    padding: 14px 15px;
+    border: 1px solid #0065fc;
+    border-radius: 0 15px 15px 0;
+    background-color: #0065fc;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+  }
+}
+
+/* bouton  rechercher */
+form button {
+  display: none;
 }
