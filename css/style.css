@@ -149,11 +149,15 @@ form i.fa-magnifying-glass {
   flex-wrap: wrap;
   gap: 60px;
   margin-bottom: 35px;
-  /* Comme la maquette */
 }
 
 .filters h2 {
   font-size: 16px;
+}
+
+.filters ul {
+  display: flex;
+  gap: 60px;
 }
 
 .filters button {
@@ -440,6 +444,10 @@ footer ul {
 
 @media (max-width: 991px) {
   .filters {
+    flex-wrap: nowrap;
+  }
+
+  .filters ul {
     gap: 10px;
   }
 
@@ -602,16 +610,12 @@ footer ul {
   .filters {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .filters ul {
     display: grid;
     grid-template-columns: 4fr 4fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    justify-items: stretch;
-    align-items: stretch;
+    width: 90%;
   }
 
   main {
@@ -619,8 +623,6 @@ footer ul {
     display: flex;
     grid-auto-flow: dense;
   }
-
-  /* intérêt ? */
 
   .hebergements {
     background-color: white;
