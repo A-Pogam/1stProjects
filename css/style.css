@@ -196,7 +196,6 @@ form i.fa-magnifying-glass {
   /* Comme la maquette */
 }
 
-
 .fa-info {
   justify-content: center;
   align-items: center;
@@ -405,6 +404,7 @@ aside figure {
 aside img {
   min-width: 100%;
   height: 88%;
+  object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
 
@@ -485,6 +485,14 @@ footer ul {
     padding-bottom: 20px;
   }
 
+  .populaires figcaption {
+    width: auto;
+  }
+
+  figure .border {
+    border: none;
+  }
+
   .populaires img {
     width: 50%;
   }
@@ -526,6 +534,11 @@ footer ul {
 /* VERSION MOBILE */
 @media (max-width: 767px) {
 
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+
   /* barre de navigation/menu */
   nav {
     display: unset;
@@ -554,6 +567,15 @@ footer ul {
 
   nav ul {
     text-align: center;
+  }
+
+  header,
+  .filters,
+  .info,
+  .populaires,
+  aside,
+  footer {
+    padding: 0 20px;
   }
 
   /* barre de recherche */
@@ -586,9 +608,8 @@ footer ul {
   }
 
   body {
-    margin-left: 15px;
-    margin-right: 15px;
-    padding-left: 0;
+
+    padding-left: 0px;
     padding-right: 0px;
   }
 
@@ -614,8 +635,17 @@ footer ul {
 
   .filters ul {
     display: grid;
+    place-items: center;
     grid-template-columns: 4fr 4fr;
     width: 90%;
+  }
+
+  .filters button {
+    width: 150px;
+  }
+
+  .info {
+    margin-bottom: 0;
   }
 
   main {
@@ -648,14 +678,17 @@ footer ul {
   .populaires {
     border-radius: 0;
     width: 100%;
-    padding-left: 15px;
-
+    box-sizing: border-box;
   }
 
   .populaires ul {
     flex-direction: column;
     border-radius: 0;
     width: 100%;
+  }
+
+  .populaires img {
+    width: 137px;
   }
 
   aside {
@@ -665,16 +698,20 @@ footer ul {
 
   aside ul {
     display: grid;
-    width: 335px;
+    /* place-items : center; */
+    width: 315px;
+    gap: 20px;
   }
 
   aside ul li {
     width: 100%;
+
   }
 
   .footer {
     padding-right: 0;
     display: grid;
     width: 100%;
+    place-content: normal;
   }
 }
