@@ -413,6 +413,7 @@ aside figcaption {
   margin-top: 15px;
   margin-bottom: 21px;
   font-weight: 700;
+  font-size: 1rem;
 }
 
 /*pied de page*/
@@ -522,7 +523,7 @@ footer ul {
 
   aside figcaption {
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 0.9rem;
   }
 
   .footer {
@@ -699,7 +700,6 @@ footer ul {
   aside ul {
     display: grid;
     /* place-items : center; */
-    width: 315px;
     gap: 20px;
   }
 
