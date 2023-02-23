@@ -235,7 +235,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   width: calc(100% - 80px);
-  gap: 30px;
+  gap: 22px;
   padding-top: 20px;
   padding-bottom: 42px;
 }
@@ -713,5 +713,6 @@ footer ul {
     display: grid;
     width: 100%;
     place-content: normal;
+    box-sizing: border-box
   }
 }
