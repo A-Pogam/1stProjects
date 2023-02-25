@@ -216,7 +216,7 @@ main {
   flex-flow: wrap;
   background-color: #f2f2f2;
   border-radius: 20px;
-  padding-left: 40px;
+  padding: 0 40px;
 }
 
 .hebergements li i.fa-solid {
@@ -234,7 +234,6 @@ main {
 .hebergements ul {
   display: flex;
   flex-wrap: wrap;
-  width: calc(100% - 80px);
   gap: 22px;
   padding-top: 20px;
   padding-bottom: 42px;
@@ -244,7 +243,7 @@ main {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px 0 #e0e0e0;
-  width: 30%;
+  width: calc((100% - 44px) / 3)
 }
 
 .hebergements img {
@@ -639,6 +638,7 @@ footer ul {
     place-items: center;
     grid-template-columns: 4fr 4fr;
     width: 90%;
+    font-size: 0.9rem;
   }
 
   .filters button {
