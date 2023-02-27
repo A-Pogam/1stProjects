@@ -161,7 +161,7 @@ form i.fa-magnifying-glass {
 }
 
 .filters button {
-  padding: 0 10px;
+  padding: 0 10px 0 0;
   cursor: pointer;
 }
 
@@ -464,13 +464,6 @@ footer ul {
     flex-direction: column;
   }
 
-  .hebergements ul {
-    width: 100%;
-  }
-
-  .hebergements {
-    width: 95%;
-  }
 
   .populaires {
     margin-top: 30px;
@@ -643,6 +636,7 @@ footer ul {
 
   .filters button {
     width: 150px;
+    font-size: 11px;
   }
 
   .info {
