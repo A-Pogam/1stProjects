@@ -235,8 +235,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 22px;
-  padding-top: 20px;
-  padding-bottom: 42px;
+  padding: 20px;
 }
 
 .hebergements li {
@@ -321,7 +320,7 @@ main {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px 0 #e0e0e0;
-  margin-top: 40px;
+  margin: 24px;
 }
 
 .populaires img {
