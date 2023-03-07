@@ -213,70 +213,70 @@ main {
 }
 
 /* hebergements */
-.hebergements {
-  display: flex;
+#hebergements {
+  display: grid;
   flex-flow: wrap;
   background-color: #f2f2f2;
   border-radius: 20px;
   padding: 0 40px;
 }
 
-.hebergements li i.fa-solid {
+#hebergements li i.fa-solid {
   color: #0065fc;
 }
 
-.hebergements li i.fa-solid:last-child {
+#hebergements li i.fa-solid:last-child {
   color: #f2f2f2;
 }
 
-.hebergements h2 {
+#hebergements h2 {
   margin: 42px 0 0 0px;
 }
 
-.hebergements ul {
+#hebergements ul {
   display: flex;
   flex-wrap: wrap;
   gap: 22px;
-  padding: 20px;
+  padding: 20px 0 20px 0;
 }
 
-.hebergements li {
+#hebergements li {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px 0 #e0e0e0;
   width: calc((100% - 44px) / 3)
 }
 
-.hebergements img {
+#hebergements img {
   object-fit: cover;
   width: 100%;
-  height: 110px;
+  height: 130px;
   border-radius: 20px 20px 0 0;
 }
 
-.hebergements a {
+#hebergements a {
   margin-left: 0px;
   padding: 0;
   font-size: 18px;
   padding-bottom: 46px;
 }
 
-.hebergements figure {
+#hebergements figure {
   margin: auto;
   border: #fff solid 5px;
   border-radius: 20px;
 }
 
-.hebergements figure figure {
+#hebergements figure figure {
   border-left-width: 0px;
 }
 
-.hebergements i.fa-solid {
+#hebergements i.fa-solid {
   margin: 1px;
   font-size: medium;
 }
 
-.hebergements figcaption {
+#hebergements figcaption {
   margin-left: 15px;
   position: relative;
 }
@@ -291,7 +291,7 @@ main {
   flex-flow: column;
   background-color: #f2f2f2;
   border-radius: 20px;
-  padding-left: 37px;
+  padding-left: 40px;
   padding-right: 40px;
   margin-right: 0;
 }
@@ -322,7 +322,7 @@ main {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px 0 #e0e0e0;
-  margin: 24px;
+  margin: 24px 0 40px 0;
 }
 
 .populaires img {
@@ -357,7 +357,7 @@ main {
 }
 
 /* activites */
-aside {
+.activites {
   background-color: #fff;
   border-radius: 20px;
   margin: auto;
@@ -365,29 +365,29 @@ aside {
   /* Bonne marge (comme la maquette) */
 }
 
-aside h2 {
+.activites h2 {
   font-weight: 800;
 }
 
-aside ul {
+.activites ul {
   display: flex;
   gap: 40px;
 }
 
-aside li {
+.activites li {
   box-shadow: 0 0 10px 0 #e0e0e0;
   border-radius: 20px;
-  width: 23%;
+  width: 50%;
   overflow: hidden;
   /* cache le dépassement, qd ça arrive */
   height: 445px;
 }
 
-aside li:last-child {
+.activites li:last-child {
   margin-right: 0px;
 }
 
-aside figure {
+.activites figure {
   margin-right: 0px;
   margin-left: 0px;
   margin-top: 0px;
@@ -395,14 +395,14 @@ aside figure {
   /* permet à ce que la hauteur respecte son cadre */
 }
 
-aside img {
+.activites img {
   min-width: 100%;
   height: 88%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
 
-aside figcaption {
+.activites figcaption {
   padding: 10px;
   font-weight: 700;
   font-size: 1rem;
@@ -486,26 +486,26 @@ footer ul {
     margin-top: 26px;
   }
 
-  /* aside tablet */
-  aside li {
+  /* .activites tablet */
+  .activites li {
     margin-right: 53px;
   }
 
-  aside ul {
+  .activites ul {
     display: flex;
     gap: 0px;
   }
 
-  aside li {
+  .activites li {
     height: 250px;
   }
 
-  aside img {
+  .activites img {
     width: 20%;
     height: 80%;
   }
 
-  aside figcaption {
+  .activites figcaption {
     margin-top: 5px;
     font-size: 0.9rem;
   }
@@ -558,7 +558,7 @@ footer ul {
   .filters,
   .info,
   .populaires,
-  aside,
+  .activites,
   footer {
     padding: 0 20px;
   }
@@ -626,6 +626,7 @@ footer ul {
 
   .filters button {
     width: 27vw;
+    height: 40px;
     font-size: x-small;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -643,13 +644,13 @@ footer ul {
     grid-auto-flow: dense;
   }
 
-  .hebergements {
+  #hebergements {
     background-color: white;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .hebergements ul {
+  #hebergements ul {
     grid-row-gap: 20px;
     margin: auto;
     width: 100%;
@@ -657,7 +658,7 @@ footer ul {
     padding-top: 19px;
   }
 
-  .hebergements ul li,
+  #hebergements ul li,
   .populaires ul li {
     width: 100%;
   }
@@ -682,18 +683,18 @@ footer ul {
     max-width: 115px;
   }
 
-  aside {
+  .activites {
     margin-left: 15px;
     margin-right: 15px;
   }
 
-  aside ul {
+  .activites ul {
     display: grid;
     /* place-items : center; */
     gap: 20px;
   }
 
-  aside ul li {
+  .activites ul li {
     width: 100%;
 
   }
